@@ -30,26 +30,38 @@ button {
 
 .selected-filters {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   vertical-align: middle;
   min-height: 37px;
-  overflow-y: auto;
   margin-bottom: 15px;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .select-filter-text {
   color: #888;
 }
 
+.filter-box-container {
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
 .filter-box {
   background-color: #f0f0f0;
   padding: 10px;
   margin-left: 14px;
+  display: flex;
+  align-items: center;
 }
 
-.filter-box span {
-  margin-left: 5px;
+.filter-name {
+  margin-right: 5px;
+}
+
+.remove-filter {
   cursor: pointer;
 }
 
@@ -119,12 +131,11 @@ button {
   margin-left: 0px;
 }
 
-.designer-item.selected {
-  background-color: #f0f0f0;
-}
-
 .designer-item-indicator {
   margin-right: 5px;
+  width: 20px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .designer-item-name {

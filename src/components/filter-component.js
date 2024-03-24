@@ -51,7 +51,7 @@ const FilterComponent = () => {
 
   const handleLetterClick = (letter) => {
     const element = document.getElementById(`designer-section-${letter}`);
-    const stickyHeader = document.querySelector(".sticky-header"); // select by class name
+    const stickyHeader = document.querySelector(".sticky-header");
     if (element && stickyHeader) {
       const stickyHeaderHeight = stickyHeader.offsetHeight;
       const elementPosition =
@@ -123,11 +123,19 @@ const FilterComponent = () => {
               <button className="clear-button" onClick={clearFilters}>
                 CLEAR
               </button>
-              {selectedFilters.map((filter) => (
-                <div key={filter} className="filter-box">
-                  {filter} <span onClick={() => removeFilter(filter)}>x</span>
-                </div>
-              ))}
+              <div className="filter-box-container">
+                {selectedFilters.map((filter) => (
+                  <div key={filter} className="filter-box">
+                    <span className="filter-name">{filter}</span>
+                    <span
+                      className="remove-filter"
+                      onClick={() => removeFilter(filter)}
+                    >
+                      x
+                    </span>
+                  </div>
+                ))}
+              </div>
             </>
           )}
         </div>
@@ -243,7 +251,7 @@ const FilterComponent = () => {
         {selectedFilters.length === 0
           ? "VIEW ALL PRODUCTS"
           : `APPLY FILTERS (${selectedFilters.length})`}
-      </button>{" "}
+      </button>
     </div>
   );
 };
