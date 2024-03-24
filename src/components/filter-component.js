@@ -195,19 +195,19 @@ const FilterComponent = () => {
           </div>
         )}
         {visibleOptions === "category" && (
-          <div className="designer-items">
+          <div className="filter-items">
             {categories.map((category) => (
               <div
                 key={category}
-                className={`designer-item ${
+                className={`filter-item ${
                   selectedFilters.includes(category) ? "selected" : ""
                 }`}
                 onClick={() => handleFilterClick(category)}
               >
-                <div className="category-item-indicator">
+                <div className="filter-item-indicator">
                   {selectedFilters.includes(category) && <span>—</span>}
                 </div>
-                <div className="category-item-name">
+                <div className="filter-item-name">
                   <span>{category}</span>
                 </div>
               </div>
@@ -215,16 +215,19 @@ const FilterComponent = () => {
           </div>
         )}
         {visibleOptions === "size" && (
-          <div className="designer-items">
+          <div className="filter-items">
             {sizes.map((size) => (
               <div
                 key={size}
-                className={`designer-item ${
+                className={`filter-item ${
                   selectedFilters.includes(size) ? "selected" : ""
                 }`}
                 onClick={() => handleFilterClick(size)}
               >
-                <div className="size-item-name">
+                <div className="filter-item-indicator">
+                  {selectedFilters.includes(size) && <span>—</span>}
+                </div>
+                <div className="filter-item-name">
                   <span>{size}</span>
                 </div>
               </div>
