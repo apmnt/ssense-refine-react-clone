@@ -156,7 +156,7 @@ const FilterComponent = () => {
             onClick={() => handleOptionClick("size")}
             className={visibleOptions === "size" ? "selected" : ""}
           >
-            SIZE
+            SIZES
           </button>
         </div>
       </div>
