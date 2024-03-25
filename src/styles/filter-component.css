@@ -7,7 +7,7 @@ button {
 .filter-component {
   display: flex;
   flex-direction: column;
-  padding: 0px 23px 23px 23px;
+  padding: 0px 23px 0px 23px;
   font-size: 11px;
   height: 100vh;
   overflow-y: scroll;
