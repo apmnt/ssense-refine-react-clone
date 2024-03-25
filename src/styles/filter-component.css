@@ -85,24 +85,13 @@ button {
   margin-bottom: 10px;
 }
 
-.filter-buttons button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  margin-right: 10px;
-  outline: none;
+.filter-options {
+  margin-bottom: 80px;
 }
 
 .designer-section {
   display: flex;
   margin-bottom: 10px;
-}
-
-.designer-sections {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
 }
 
 .designer-section {
@@ -177,7 +166,7 @@ button {
   border: none;
   cursor: pointer;
   padding: 0;
-  margin-right: 10px;
+  margin-right: 20px;
   outline: none;
 }
 
@@ -218,18 +207,25 @@ button {
 }
 
 .sticky-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   background-color: white;
   z-index: 1;
   padding-top: 10px;
-  padding-bottom: 20px;
+}
+
+.header-spacer {
+  height: 200px;
 }
 
 .filter-items {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: none;
+  height: 100vh;
 }
 
 .filter-item {

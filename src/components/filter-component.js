@@ -161,6 +161,7 @@ const FilterComponent = () => {
         </div>
       </div>
       <div className="filter-options">
+        <div className="header-spacer"></div>
         {visibleOptions === "designer" && (
           <div className="designer-sections">
             {Object.entries(designerSections).map(([letter, designers]) => (
