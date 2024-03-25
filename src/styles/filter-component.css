@@ -9,6 +9,10 @@ button {
   flex-direction: column;
   padding: 0px 23px 23px 23px;
   font-size: 11px;
+  height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 .filter-header {
