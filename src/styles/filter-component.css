@@ -224,7 +224,7 @@ button {
   overscroll-behavior: contain;
   -webkit-overflow-scrolling: touch;
   overflow-y: none;
-  height: 100vh;
+  height: 60vh;
 }
 
 .filter-item {
